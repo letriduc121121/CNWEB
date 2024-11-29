@@ -1,2 +1,0 @@
-cho vao the head
-    <link rel="stylesheet" href="/icon/themify-icons.css">
