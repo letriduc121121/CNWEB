@@ -36,7 +36,7 @@ $result = $conn->query($sql);
     <div class="container mt-5">
         <header class="bg-light p-3 mb-4">
             <nav class="nav d-flex justify-content-center">
-                <a class="nav-link fs-1 fw-bold text-center" style=" color:white;" href="#"> Thông tin các loài hoa</a>
+                <a class="nav-link fs-1 fw-bold text-center" style=" color:white;" href="#"> DANH SÁCH SINH VIÊN</a>
             </nav>
         </header>
 
