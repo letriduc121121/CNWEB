@@ -10,10 +10,10 @@
 
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Danh sách các vấn đề máy tính</h1>
+        <h1 class="text-center mb-4">Quản lí danh sách máy tính</h1>
 
         <div class="col-sm-6">
-			<a href="{{ route('issues.create') }}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Thêm đồ án mới</span></a>
+			<a href="{{ route('issues.create') }}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Thêm </span></a>
         </div>
 
         <div class="table-responsive">
@@ -22,8 +22,8 @@
                 {{ session('success') }}
             </div>
             @endif
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
+            <table class="table table-bordered table">
+                <thead class="table-success">
                     <tr>
                         <th>Mã vấn đề</th>
                         <th>Tên Máy Tính</th>

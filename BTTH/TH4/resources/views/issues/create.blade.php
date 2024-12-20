@@ -76,7 +76,7 @@
                     <!-- Nút Lưu -->
                     <div class="d-flex justify-content-end">
                         <a href="{{ route('issues.index') }}" class="btn btn-secondary me-2">Hủy</a>
-                        <button type="submit" class="btn btn-primary">Lưu Sự Cố</button>
+                        <button type="submit" class="btn btn-primary">Thêm mới</button>
                     </div>
                 </form>
             </div>
