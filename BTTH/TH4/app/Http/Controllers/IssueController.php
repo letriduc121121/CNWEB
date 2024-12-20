@@ -70,7 +70,11 @@ class IssueController extends Controller
      */
     public function edit(string $id)
     {
-        
+        // Find the issue and fetch all computers
+        $issue = Issue::findOrFail($id);
+        $computers = Computer::all();
+
+        return view('issues.edit', compact('issue', 'computers'));
     }
 
     /**
@@ -78,8 +82,26 @@ class IssueController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // Find the issue
+        $issue = Issue::findOrFail($id);
+
+        // Validate input
+        $validated = $request->validate([
+            'computer_id' => 'required|exists:computers,id',
+            'reported_by' => 'required|max:255',
+            'reported_date' => 'required|date',
+            'description' => 'required|max:255',
+            'urgency' => 'required|in:Low,Medium,High',
+            'status' => 'required|in:Open,In Progress,Resolved',
+        ]);
+
+        // Update the issue
+        $issue->update($validated);
+
+        // Redirect with success message
+        return redirect()->route('issues.index')->with('success', 'Sự cố đã được cập nhật thành công!');
     }
+
 
     /**
      * Remove the specified resource from storage.

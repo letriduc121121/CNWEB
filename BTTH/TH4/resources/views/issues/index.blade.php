@@ -10,7 +10,7 @@
 
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Danh sách Sự Cố</h1>
+        <h1 class="text-center mb-4">Danh sách các vấn đề máy tính</h1>
 
         <div class="col-sm-6">
 			<a href="{{ route('issues.create') }}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Thêm đồ án mới</span></a>
@@ -46,6 +46,7 @@
                         <td>{{ $issue->urgency }}</td>
                         <td>{{ $issue->status }}</td>
                         <td>
+                        <a href="{{ route('issues.edit', $issue->id) }}" class="btn btn-primary">Sửa</a>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $issue->id }}">
                                 Xóa
                             </button>
